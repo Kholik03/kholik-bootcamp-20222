@@ -20,6 +20,7 @@ class CartController extends Controller
         $cart = new Carts();
         $cart->product_id = $request->products_id;
         $cart->customer_id = getCustSessions()->id;
+        // $cart->quantity = $request->quantity;
         $cart->save();
 
         return redirect('cart')->with('success', 'Success add to cart');

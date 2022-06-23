@@ -8,14 +8,14 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
     //
-public function getSearch(Request $request)
-    {
-      if ($request->has('search')){
-        $data['product'] = Products::where('product_name', 'LIKE', '%'.$request->search.'%');
-      } else {
-       return view('front.product_detail');
-      }
-    }
+    // public function getSearch(Request $request)
+    // {
+    //   if ($request->has('search')){
+    //     $data['product'] = Products::where('product_name', 'LIKE', '%'.$request->search.'%');
+    //   } else {
+    //    return view('front.product_detail');
+    //   }
+    // }
 
     public static function getDetail($id)
     {

@@ -1,10 +1,10 @@
 @extends('template.front.layout')
 @section('content')
         <!-- Header-->
-        <header class="bg-dark py-5">
+        <header class="bg-primary py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder">Shop in style</h1>
+                    <h1 class="display-4 fw-bolder">ADINUSA SHOP</h1>
                 </div>
             </div>
         {{-- Search --}}
@@ -55,7 +55,7 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{{url('cart/add?products_id='.$product->id)}}">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="{{url('cart/add?products_id='.$product->id)}}">Beli</a></div>
                             </div>
                         </div>
                     </div>

@@ -1,5 +1,22 @@
 @extends('backend.layout.main')
 @section('content')
+
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+
+<script>
+    tinymce.init({
+      selector: '#mytextarea',
+      plugins: [
+        'a11ychecker','advlist','advcode','advtable','autolink','checklist','export',
+        'lists','link','image','charmap','preview','anchor','searchreplace','visualblocks',
+        'powerpaste','fullscreen','formatpainter','insertdatetime','media','table','help','wordcount'
+      ],
+      toolbar: 'undo redo | formatpainter casechange blocks | bold italic backcolor | ' +
+        'alignleft aligncenter alignright alignjustify | ' +
+        'bullist numlist checklist outdent indent | removeformat | a11ycheck code table help'
+    });
+  </script>
+
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800">{{$title}}</h1>
     </div>
@@ -35,7 +52,7 @@
                     </div>
                     <div class="form-group row mb-3">
                         <label class="col-md-3 mt-2">Description</label>
-                        <textarea name="description" id="" cols="30" rows="10" class="form-control bg-dark text-light border-0 small col-md-8">{{$row->description}}</textarea>
+                        <textarea name="description" id="mytextarea" cols="30" rows="10" class="form-control bg-dark text-light border-0 small col-md-8">{{$row->description}}</textarea>
                     </div>
                 </div>
             </div>

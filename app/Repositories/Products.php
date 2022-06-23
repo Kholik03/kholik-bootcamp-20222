@@ -16,7 +16,9 @@ class Products extends ProductsModel
 
         if(isset($search))
         {
-            $data = $data->where('product_name','like','%'.$search.'%');
+            $data = $data
+                ->where('product_name','like','%'.$search.'%')
+                ->orWhere('product_price', 'like','%'.$search.'%');
         }
 
         $data = $data->get();
